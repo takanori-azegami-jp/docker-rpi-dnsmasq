@@ -24,4 +24,4 @@ $ nelookup ドメイン名　[DNSホストのIP]
 [DnsmasqをDockerで起動する](https://scribble.washo3.com/dnsmasq_on_docker.html)
 
 RaspberryPi(arm64bit)環境でビルドされた下記Dockerイメージを使用<br>
-[https://hub.docker.com/r/4km3/dnsmasq](https://hub.docker.com/r/4km3/dnsmasq)
+[Docker Hub：4km3/dnsmasq](https://hub.docker.com/r/4km3/dnsmasq)
