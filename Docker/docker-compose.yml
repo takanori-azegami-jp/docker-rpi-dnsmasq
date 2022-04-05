@@ -2,7 +2,9 @@ version: '3.8'
 services:
   dnsmasq:
     restart: always
-    image: 4km3/dnsmasq:latest
+    build:
+      context: .
+      dockerfile: Dockerfile
     container_name: dnsmasq
     ports:
       - "53:53/udp"
@@ -18,3 +20,4 @@ services:
 volumes:
   dnsmasq_data:
     driver: local
+    
