@@ -22,6 +22,3 @@ $ nelookup ドメイン名　[DNSホストのIP]
 
 ## 参考
 [DnsmasqをDockerで起動する](https://scribble.washo3.com/dnsmasq_on_docker.html)
-
-RaspberryPi(arm64bit)環境でビルドされた下記Dockerイメージを使用<br>
-[Docker Hub：4km3/dnsmasq](https://hub.docker.com/r/4km3/dnsmasq)
