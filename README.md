@@ -22,3 +22,5 @@ $ nelookup ドメイン名　[DNSホストのIP]
 
 ## 参考
 [DnsmasqをDockerで起動する](https://scribble.washo3.com/dnsmasq_on_docker.html)
+
+[DockerでDnsmasqを使ったローカル環境の内部DNSを構築するメモ](https://7me.nobiki.com/2020/04/22/dnsmasq-docker-memo/)
