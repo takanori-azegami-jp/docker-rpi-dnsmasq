@@ -1,0 +1,22 @@
+version: '3.8'
+services:
+  dnsmasq:
+    restart: always
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: dnsmasq
+    ports:
+      - "53:53/udp"
+    dns:
+      - 127.0.0.1
+      - 8.8.8.8
+    cap_add:
+      - NET_ADMIN  #必須
+    volumes:
+      - /etc/hosts:/etc/hosts # /etc/hostsと共用
+      - /var/log/dnsmasq.log:/var/log/dnsmasq.log
+      - $PWD/dnsmasq.conf:/etc/dnsmasq.conf
+volumes:
+  dnsmasq_data:
+    driver: local
