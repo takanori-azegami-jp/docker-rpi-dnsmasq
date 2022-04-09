@@ -6,6 +6,10 @@ docker-compose.ymlを配置したフォルダに移動して実行
 ~~~
 $ docker-compose up -d --build
 ~~~
+alpine linuxベースなのでコンテナに入るときは`bash`ではなく`ash`を使う
+~~~
+$ docker exec -it [コンテナid] /bin/ash
+~~~
 
 ## 名前解決は/etc/hostsで行う
 ~~~
