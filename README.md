@@ -1,6 +1,11 @@
 # DockerBuild-RaspberryPi64-Dnsmasq
 RaspberryPi(64bit)にDockerでDnsmasqを構築（内部向けのDNS構築）
 
+## 環境
+OS： Debian11
+カーネル：5.10.103-v8+
+マシンタイプ：aarch64
+
 ## コンテナ起動
 docker-compose.ymlを配置したフォルダに移動して実行
 ~~~
