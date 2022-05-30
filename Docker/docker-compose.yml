@@ -6,6 +6,8 @@ services:
       context: .
       dockerfile: Dockerfile
     container_name: dnsmasq
+    environment:
+      TZ: "Asia/Tokyo"
     ports:
       - "53:53/udp"
     dns:
@@ -20,4 +22,3 @@ services:
 volumes:
   dnsmasq_data:
     driver: local
-    
