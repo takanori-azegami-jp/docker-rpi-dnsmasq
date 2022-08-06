@@ -2,9 +2,8 @@
 RaspberryPi(64bit)にDockerでDnsmasqを構築（内部向けのDNS構築）
 
 ## 環境
-- OS： Debian11
-- カーネル：5.10.103-v8+
-- マシンタイプ：aarch64
+- kernel：Linux ホスト名 5.15.32-v8+ #1538 SMP PREEMPT Thu Mar 31 19:40:39 BST 2022 aarch64 GNU/Linux
+- OS：Debian GNU/Linux 11 (bullseye)
 
 ## コンテナ起動
 docker-compose.ymlを配置したフォルダに移動して実行
@@ -13,7 +12,7 @@ $ docker-compose up -d --build
 ~~~
 alpine linuxベースなのでコンテナに入るときは`bash`ではなく`ash`を使う
 ~~~
-$ docker exec -it [コンテナid] /bin/ash
+$ docker exec -it [コンテナid] /bin/sh
 ~~~
 
 ## 名前解決は/etc/hostsで行う
@@ -30,6 +29,5 @@ $ nelookup ドメイン名　[DNSホストのIP]
 ~~~
 
 ## 参考
-[DnsmasqをDockerで起動する](https://scribble.washo3.com/dnsmasq_on_docker.html)
-
-[DockerでDnsmasqを使ったローカル環境の内部DNSを構築するメモ](https://7me.nobiki.com/2020/04/22/dnsmasq-docker-memo/)
+- [DnsmasqをDockerで起動する](https://scribble.washo3.com/dnsmasq_on_docker.html)
+- [DockerでDnsmasqを使ったローカル環境の内部DNSを構築するメモ](https://7me.nobiki.com/2020/04/22/dnsmasq-docker-memo/)

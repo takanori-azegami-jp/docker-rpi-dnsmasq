@@ -4,7 +4,7 @@ services:
     restart: always
     build:
       context: .
-      dockerfile: Dockerfile
+      dockerfile: dockerfile_dnsmasq
     container_name: dnsmasq
     environment:
       TZ: "Asia/Tokyo"
@@ -13,12 +13,16 @@ services:
     dns:
       - 127.0.0.1
       - 8.8.8.8
+      - 8.8.4.4
     cap_add:
       - NET_ADMIN  #必須
     volumes:
-      - /etc/hosts:/etc/hosts # /etc/hostsと共用
-      - /var/log/dnsmasq.log:/var/log/dnsmasq.log
-      - $PWD/dnsmasq.conf:/etc/dnsmasq.conf
+      # configファイル
+      - ./conf/dnsmasq.conf:/etc/dnsmasq.conf
+      # /etc/hostsを共用
+      - /etc/hosts:/etc/hosts  
+      # logファイル
+      - dnsmasq:/var/log/dnsmasq
 volumes:
-  dnsmasq_data:
+  dnsmasq:
     driver: local
