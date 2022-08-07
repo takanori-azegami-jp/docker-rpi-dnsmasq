@@ -6,8 +6,7 @@ RaspberryPi(64bit)にDockerでDnsmasqを構築（内部向けのDNS構築）
 - OS：Debian GNU/Linux 11 (bullseye)
 
 ## ドメイン名を変更
-./conf/dnsmasq.conf
-
+./conf/dnsmasq.conf<br>
 [ドメイン名]を変更する(例: local or example.com)
 
 ## コンテナ起動
