@@ -5,6 +5,10 @@ RaspberryPi(64bit)にDockerでDnsmasqを構築（内部向けのDNS構築）
 - kernel：Linux ホスト名 5.15.32-v8+ #1538 SMP PREEMPT Thu Mar 31 19:40:39 BST 2022 aarch64 GNU/Linux
 - OS：Debian GNU/Linux 11 (bullseye)
 
+## ドメイン名を変更
+./conf/dnsmasq.conf
+[ドメイン名]を変更する(例: local or example.com)
+
 ## コンテナ起動
 docker-compose.ymlを配置したフォルダに移動して実行
 ~~~

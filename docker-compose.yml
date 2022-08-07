@@ -10,10 +10,6 @@ services:
       TZ: "Asia/Tokyo"
     ports:
       - "53:53/udp"
-    dns:
-      - 127.0.0.1
-      - 8.8.8.8
-      - 8.8.4.4
     cap_add:
       - NET_ADMIN  #必須
     volumes:
