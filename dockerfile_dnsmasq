@@ -1,4 +1,9 @@
 FROM alpine:edge
+
+RUN apk update
+RUN apk --update add vim
 RUN apk --no-cache add dnsmasq
+
 EXPOSE 53 53/udp
+
 ENTRYPOINT ["dnsmasq", "-k"]

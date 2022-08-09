@@ -15,8 +15,8 @@ services:
     volumes:
       # configファイル
       - ./conf/dnsmasq.conf:/etc/dnsmasq.conf
-      # /etc/hostsを共用
       - /etc/hosts:/etc/hosts  
+      - /etc/resolv.conf:/etc/resolv.conf  
       # logファイル
       - dnsmasq:/var/log/dnsmasq
 volumes:
