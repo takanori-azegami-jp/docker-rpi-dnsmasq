@@ -1,8 +1,12 @@
 FROM alpine:edge
 
 RUN apk update
-RUN apk --update add vim
-RUN apk --no-cache add dnsmasq
+RUN apk --no-cache add dnsmasq bind-tools vim
+
+COPY healthcheck.sh  /
+RUN chmod +x /healthcheck.sh
+
+HEALTHCHECK --interval=10s --timeout=3s CMD /healthcheck.sh
 
 EXPOSE 53 53/udp
 

@@ -10,13 +10,14 @@ services:
       TZ: "Asia/Tokyo"
     ports:
       - "53:53/udp"
+      - "53:53/tcp"
     cap_add:
       - NET_ADMIN
     volumes:
       # configファイル
       - ./conf/dnsmasq.conf:/etc/dnsmasq.conf
-      - /etc/hosts:/etc/hosts  
-      - /etc/resolv.conf:/etc/resolv.conf  
+      - ./conf/hosts-dnsmasq:/etc/hosts-dnsmasq
+      - ./conf/dnsmasq-resolv.conf:/etc/dnsmasq-resolv.conf
       # logファイル
       - dnsmasq:/var/log/dnsmasq
 volumes:
