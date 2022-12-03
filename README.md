@@ -1,4 +1,4 @@
-# DockerBuild-RaspberryPi-Dnsmasq
+# docker-rpi-dnsmasq
 RaspberryPi(64bit)にDockerでDnsmasqを構築（内部向けのDNS構築）
 
 ## 環境
